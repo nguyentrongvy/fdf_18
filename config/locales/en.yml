@@ -1,0 +1,21 @@
+en:
+  layouts:
+    application:
+      food_drink: "Food and Drink"
+    footer:
+      author: "This is project 1 of Nguyen Van Hoan itern and
+        Nguyen Minh Tuan new dev."
+      food_drink: "Food and Drink"
+      drink_for_everyone: "Drink for everyone"
+      our_address: "Our Address"
+      keangnam_tower_13th_floor: :"Keangnam Tower 13th floor,"
+      nam_tu_liem_district_Ha Noi: Nam Tu Liem District, Ha Noi,"
+      viet_nam: "Viet Nam"
+      company_phone: "Phone:(00) 222 666 444"
+      company_fax: "Fax: (000) 000 00 00 0"
+      email: "Email:"
+      copy_right: "2013 All Rights Reseverd Designed by"
+      home: "Home"
+      terms_of_user: "Terms of use"
+      privacy_policy: "Privacy Policy"
+      contact: "Contact"
