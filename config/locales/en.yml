@@ -37,12 +37,27 @@ en:
   logout: "Log out"
   home: "Home"
   about: "About"
+  change: "Change"
   users:
     new:
       create: "Sign Up"
       signup: "Sign Up"
     create:
       welcome_user: "Welcome To Framgia Food and Drink"
+    show:
+      email: "Email: "
+      phone: "Phone number: "
+      address: "Address: "
+      none: "There are no user that matches this id!"
+      log_in: "Please log in first!"
+    edit:
+      save: "Save Changes"
+      update_profile: "Update Profile"
+      edit_profile: "Edit Profile"
+      can_not: "You don't have permission to access this page!"
+      log_in: "Please log in first!"
+    update:
+      success: "Your profile has been updated!"
   sessions:
     create:
       invalid: "Wrong email or password. Please try again!"
