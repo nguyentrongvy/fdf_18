@@ -16,6 +16,7 @@ gem "coffee-rails", "~> 4.2"
 gem "jquery-rails"
 gem "jbuilder", "~> 2.5"
 gem "turbolinks"
+gem "bcrypt"
 
 group :development, :test do
   gem "letter_opener"
