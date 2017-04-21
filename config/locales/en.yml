@@ -19,3 +19,9 @@ en:
       terms_of_user: "Terms of use"
       privacy_policy: "Privacy Policy"
       contact: "Contact"
+  products:
+    index:
+      suggest: "Suggest"
+  home_pages:
+    about:
+      about: "About"
