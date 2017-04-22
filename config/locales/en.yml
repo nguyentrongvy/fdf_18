@@ -25,3 +25,30 @@ en:
   home_pages:
     about:
       about: "About"
+  login: "Log in"
+  newuser: "New User?"
+  signup: "Sign Up Now!"
+  name: "Name"
+  email: "Email"
+  password: "Password"
+  confirm_password: "Password Confirmation"
+  registration: "Registration"
+  profile: "Profile"
+  logout: "Log out"
+  home: "Home"
+  about: "About"
+  users:
+    new:
+      create: "Sign Up"
+      signup: "Sign Up"
+    create:
+      welcome_user: "Welcome To Framgia Food and Drink"
+  sessions:
+    create:
+      invalid: "Wrong email or password. Please try again!"
+      login_success: "Welcome back, "
+    new:
+      login: "Log in"
+  shared:
+    error_messages:
+      errors: "The form contains"

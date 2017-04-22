@@ -15,24 +15,20 @@
           <span>Menu</span>
         </label>
         <input id="mobile_menu" type="checkbox">
-
         <ul class="nav">
-          <li><a href="index.html">Home</a></li>
-          <li class="dropdown"><a href="room.html">Classify</a>
-            <ul class="dropdown2">
-              <li><a href="room.html">Seafood</a></li>
-              <li><a href="room.html">Party</a></li>
-              <li><a href="room.html">Coffice</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="about.html">About</a></li>
-          <li class="dropdown"><a href="blog.html">You eat with</a>
-            <ul>
-              <li><a href="blog.html">Alone</a></li>
-              <li><a href="blog.html">Friend</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#"><%= t "home" %></a></li>
+          <li><a href="#"><%= t "about" %></a></li>
+          <% if logged_in? %>
+            <li class="dropdown"><%= link_to current_user.name, "#" %></a>
+              <ul>
+                <li><%= link_to t("profile"), current_user %></li>
+                <li><%= link_to t("logout"), logout_path, method: :delete %></li>
+              </ul>
+            </li>
+          <% else %>
+            <li class="dropdown"><%= link_to t("login"), login_path %></li>
+          <% end %>
+          <li><a href="#">Contact</a></li>
           <div class="clearfix"></div>
         </ul>
       </div>
