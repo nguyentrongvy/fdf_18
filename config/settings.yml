@@ -6,3 +6,5 @@ image:
     category_height: 224
     avatar_width: 80
     avatar_height: 80
+    food_detail_width: 750
+    food_detail_height: 223

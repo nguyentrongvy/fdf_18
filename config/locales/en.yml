@@ -22,6 +22,14 @@ en:
   products:
     index:
       suggest: "Suggest"
+    show:
+      by_admin: "by Admin"
+      comments: "comments"
+      point: "point"
+      write_comment: "How are you think ?"
+      comment: "Comment"
+      comment_title: "Comments"
+      ago: "ago"
   home_pages:
     about:
       about: "About"
