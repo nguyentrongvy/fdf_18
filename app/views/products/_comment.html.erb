@@ -1,0 +1,28 @@
+<%= form_for comment do |f| %>
+  <article class="row">
+    <div class="col-md-2 col-sm-2 hidden-xs">
+      <figure class="thumbnail">
+        <%= link_to gravatar_for comment.user %>
+      </figure>
+    </div>
+    <div class="col-md-10 col-sm-10">
+      <div class="panel panel-default arrow left">
+        <div class="panel-body">
+          <header class="text-left">
+            <div class="comment-user"><i class="fa fa-user"></i>
+              <%= comment.user.name %>
+            </div>
+            <time class="comment-date" datetime="16-12-2014 01:05">
+              <i class="fa fa-clock-o"></i>
+              <%= time_ago_in_words comment.created_at %>
+              <%= t(".ago") %>
+            </time>
+          </header>
+          <div class="comment-post">
+              <p><%= comment.content %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+<% end %>

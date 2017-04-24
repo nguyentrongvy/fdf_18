@@ -3,5 +3,6 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @product = Product.includes(:comments).find_by id: params[:id]
   end
 end
