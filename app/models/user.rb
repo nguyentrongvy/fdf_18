@@ -8,7 +8,7 @@ class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true,
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
-  validates :password, presence: true
+  validates :password, presence: true, allow_blank: true
   validates :address, :phone, presence: true
   has_secure_password
 
@@ -16,6 +16,10 @@ class User < ApplicationRecord
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
       BCrypt::Engine.cost
     BCrypt::Password.create string, cost: cost
+  end
+
+  def is_user? user
+    self == user
   end
 
   private
