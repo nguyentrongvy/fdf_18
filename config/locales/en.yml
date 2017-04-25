@@ -27,10 +27,13 @@ en:
       by_admin: "by Admin"
       comments: "comments"
       point: "point"
-      write_comment: "How are you think ?"
-      comment: "Comment"
       comment_title: "Comments"
       ago: "ago"
+    add_comment:
+      cancel: "Cancel"
+      comment: "Comment"
+      write_comment: "How_are_you_think_?"
+      rating_comment: "Rating or add your comment"
   home_pages:
     about:
       about: "About"
@@ -85,3 +88,7 @@ en:
   shared:
     error_messages:
       errors: "The form contains"
+  comments:
+    create:
+      can't_comment: "Can't comment, please try again !"
+      commented: "Commented !"
