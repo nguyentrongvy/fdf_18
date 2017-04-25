@@ -31,41 +31,15 @@
             <p><%= @product.description%></p>
           </div>
 
-          <div class="container">
-            <div class="row" style="margin-top:40px;">
-              <div class="col-md-6">
-                <div class="well well-sm">
-                  <div class="row" id="post-review-box">
-                    <div class="col-md-12">
-                      <form accept-charset="UTF-8" action="" method="post">
-                        <input id="ratings-hidden" name="rating" type="hidden">
-                        <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder= <%= t(".write_comment") %> rows="5">
-                        </textarea>
-                        <div class="text-right">
-                          <div class="stars starrr" data-rating="0">
-                          </div>
-                          <button class="btn btn-success btn-lg" type="submit">
-                            <%= t(".comment") %>
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <%= render partial: "add_comment"%>
 
           <div class="container">
             <div class="row">
               <div class="col-md-8">
                 <h2 class="page-header"><%= t(".comment_title") %></h2>
-
                   <section class="comment-list">
-
                     <%= render partial: "comment", collection: @product.comments %>
                   </section>
-
               </div>
             </div>
           </div>
