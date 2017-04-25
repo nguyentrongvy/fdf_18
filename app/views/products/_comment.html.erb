@@ -12,14 +12,14 @@
             <div class="comment-user"><i class="fa fa-user"></i>
               <%= comment.user.name %>
             </div>
-            <time class="comment-date" datetime="16-12-2014 01:05">
+            <time class="comment-date">
               <i class="fa fa-clock-o"></i>
               <%= time_ago_in_words comment.created_at %>
               <%= t(".ago") %>
             </time>
           </header>
           <div class="comment-post">
-              <p><%= comment.content %></p>
+            <p><%= comment.content %></p>
           </div>
         </div>
       </div>

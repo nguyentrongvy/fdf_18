@@ -1,33 +1,53 @@
 <% provide :title, @user.name %>
-<div class="container-fluid well span6 profile">
-  <div class="row-fluid">
-    <div class="span2" >
-      <%= gravatar_for @user %>
-    </div>
-    <div class="span8">
-      <h3><%= @user.name %></h3>
-      <h6><%= t ".email" %><%= @user.email %></h6>
-      <h6><%= t ".phone" %><%= @user.phone %></h6>
-      <h6><%= t ".address" %><%= @user.address %></h6>
-    </div>
-    <% if @user.is_user? @current_user %>
-      <div class="span2">
-        <div class="btn-group">
-          <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
-            <%= t "action" %>
-            <span class="glyphicon glyphicon-cog"></span><span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><%= link_to t(".edit"), edit_user_path(current_user),
-              class: "glyphicon glyphicon-pencil"%></li>
-            <li>
-              <a href="#">
-                <span class="glyphicon glyphicon-trash"></span><%= t ".delete" %>
-              </a>
-            </li>
-          </ul>
+<h1 class="text-center"><%= t "your_profile" %></h1>
+<div class="container profile">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0
+      col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title"><i class="glyphicon glyphicon-user"></i></h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-3 col-lg-3" align="center">
+              <%= gravatar_for @user %>
+            </div>
+            <div class=" col-md-9 col-lg-9 ">
+              <table class="table table-user-information">
+                <tbody>
+                  <tr>
+                    <td><%= t "name" %></td>
+                    <td><%= @user.name %></td>
+                  </tr>
+                  <tr>
+                    <td><%= t "email" %></td>
+                    <td><%= @user.email %></td>
+                  </tr>
+                  <tr>
+                    <td><%= t "address" %></td>
+                    <td><%= @user.address %></td>
+                  </tr>
+                  <tr>
+                    <td><%= t "phone" %></td>
+                    <td><%= @user.phone %></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <i class="glyphicon glyphicon-envelope"></i>
+          <span class="pull-right">
+            <% if @user.is_user? @current_user %>
+              <%= link_to edit_user_path(current_user) do %>
+                <i class="glyphicon glyphicon-pencil" title="Edit Profile"></i>
+              <% end %>
+            <% end %>
+          </span>
         </div>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>
