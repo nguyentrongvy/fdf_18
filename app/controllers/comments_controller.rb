@@ -5,11 +5,15 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.build comment_params
 
     if @comment.save
-      flash[:success] = t ".commented"
+      render json: {
+        html_comment: render_to_string(partial: "/comments/comment",
+          locals: {comment: @comment},
+          layout: false
+        )
+      }, status: :created
     else
-      flash[:danger] = t ".can't_comment"
+      render json: @comment.errors, status: :unprocessable_entity
     end
-    redirect_to :back
   end
 
   private

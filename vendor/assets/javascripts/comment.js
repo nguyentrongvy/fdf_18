@@ -15,10 +15,10 @@ $(function(){
   openReviewBtn.click(function(e)
   {
     reviewBox.slideDown(400, function()
-      {
-        $('#new-review').trigger('autosize.resize');
-        newReview.focus();
-      });
+    {
+      $('#new-review').trigger('autosize.resize');
+      newReview.focus();
+    });
     openReviewBtn.fadeOut(100);
     closeReviewBtn.show();
   });
@@ -27,10 +27,10 @@ $(function(){
   {
     e.preventDefault();
     reviewBox.slideUp(300, function()
-      {
-        newReview.focus();
-        openReviewBtn.fadeIn(200);
-      });
+    {
+      newReview.focus();
+      openReviewBtn.fadeIn(200);
+    });
     closeReviewBtn.hide();
 
   });

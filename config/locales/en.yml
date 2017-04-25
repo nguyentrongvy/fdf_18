@@ -29,11 +29,6 @@ en:
       point: "point"
       comment_title: "Comments"
       ago: "ago"
-    add_comment:
-      cancel: "Cancel"
-      comment: "Comment"
-      write_comment: "How_are_you_think_?"
-      rating_comment: "Rating or add your comment"
   home_pages:
     about:
       about: "About"
@@ -92,3 +87,11 @@ en:
     create:
       can't_comment: "Can't comment, please try again !"
       commented: "Commented !"
+    add_comment:
+      cancel: "Cancel"
+      comment: "Comment"
+      write_comment: "What are you thinking ?"
+      rating_comment: "Add your comment"
+  javascript:
+    please_enter: "Please enter first !"
+    error_comment: "Error, please try again: \n"
