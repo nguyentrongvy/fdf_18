@@ -29,6 +29,10 @@ en:
       point: "point"
       comment_title: "Comments"
       ago: "ago"
+    new:
+      create: "Create new product"
+    create:
+      product_success: "New product has been created!"
   home_pages:
     about:
       about: "About"
@@ -54,6 +58,16 @@ en:
   address: "Address:"
   phone: "Phone:"
   your_profile: "Profile Detail"
+  contact: "Contact"
+  price: "Price:"
+  description: "Description:"
+  quantity: "Quantity:"
+  category: "Category:"
+  not_admin: "You do not have permission to access this URL!"
+  add_product: "Add new product"
+  log_in: "Please log in first!"
+  add_image: "Add Image"
+  remove: "Remove"
   users:
     new:
       create: "Sign Up"
@@ -65,13 +79,11 @@ en:
       phone: "Phone number: "
       address: "Address: "
       none: "There is no user that matches this id!"
-      log_in: "Please log in first!"
     edit:
       save: "Save Changes"
       update_profile: "Update Profile"
       edit_profile: "Edit Profile"
       can_not: "You don't have permission to access this page!"
-      log_in: "Please log in first!"
     update:
       success: "Your profile has been updated!"
   sessions:
