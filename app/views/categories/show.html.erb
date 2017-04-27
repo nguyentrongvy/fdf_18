@@ -1,0 +1,7 @@
+<% provide :title, @category.name %>
+<h1 class="text-center title"><%= @category.name %></h1>
+<div class="container">
+  <div class="row">
+    <%= render partial: "product", collection: @products %>
+  </div>
+</div>

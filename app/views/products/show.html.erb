@@ -43,7 +43,7 @@
             </div>
             <% @product_images.each do |product_images| %>
               <%= image_tag(product_images.image,
-                size: Settings.image.size.food_size) %>
+                size: Settings.image.size.food_edit) %>
             <% end %>
             <p><%= @product.description%></p>
           </div>

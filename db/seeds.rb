@@ -1,9 +1,13 @@
-Category.create! name: "Crab",
-  description: "This is category of food",
+Category.create! name: "Food",
+  description: "This is Food",
   parent_id: nil
 
-Category.create! name: "Fish",
-  description: "This is category of food",
+Category.create! name: "Drink",
+  description: "This is Drink",
+  parent_id: nil
+
+Category.create! name: "Seafood",
+  description: "This is category of Food",
   parent_id: 1
 
 Product.create! name: "Crab Food",
@@ -11,7 +15,7 @@ Product.create! name: "Crab Food",
   price: 50000,
   quantity: 2,
   current_score: 4,
-  category_id: 2
+  category_id: 3
 
 ProductImage.create! product_id: 1,
   remote_image_url: "http://www.mccain.com/SiteCollectionImages/McCainCorporate/goodfood-products/McCain-Smiles-N-America.png"
