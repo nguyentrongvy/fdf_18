@@ -23,17 +23,14 @@
               <div class="post1_header_by">
                 <%= t ".by_admin" %>
               </div>
-
             </div>
-            <%= link_to image_tag(@product.product_images.first.image,
-              width: Settings.image.size.food_detail_width,
-              height: Settings.image.size.food_detail_height),
-              class: "img-responsive"%>
+            <% @product_images.each do |product_images| %>
+              <%= image_tag(product_images.image,
+                size: Settings.image.size.food_size) %>
+            <% end %>
             <p><%= @product.description%></p>
           </div>
-
           <%= render partial: "comments/add_comment"%>
-
           <div class="container">
             <div class="row">
               <div class="col-md-8">
@@ -45,7 +42,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-md-4">
           <div class="category_widget">
             <h3>Category</h3>
@@ -61,7 +57,6 @@
           </ul>
           <ul class="recent-list">
             <h3><%= t(".suggest") %></h3>
-
             <div class="course_demo">
               <ul id="flexiselDemo3">
                 <li><%= link_to image_tag("pic1.jpg"), class: "img-responsive",

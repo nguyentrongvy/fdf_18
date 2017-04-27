@@ -3,5 +3,10 @@ class Product < ApplicationRecord
   has_many :line_items
   has_many :comments
   has_many :ratings
-  has_many :product_images
+  has_many :product_images, dependent: :destroy
+  accepts_nested_attributes_for :product_images, reject_if: lambda {|attr| attr[:image].blank?},
+    allow_destroy: true
+
+  validates :description, :quantity, :price, presence: true
+  validates :name, presence: true, uniqueness: {case_sensitive: false}
 end

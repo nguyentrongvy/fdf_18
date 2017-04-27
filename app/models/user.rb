@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   before_save :email_downcase
+  enum role: [:admin, :user, :guest]
 
   has_many :comments
   has_many :orders

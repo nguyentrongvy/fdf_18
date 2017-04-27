@@ -18,6 +18,7 @@ gem "jquery-rails"
 gem "jbuilder", "~> 2.5"
 gem "turbolinks"
 gem "bcrypt"
+gem "carrierwave", "0.11.2"
 
 group :development, :test do
   gem "letter_opener"

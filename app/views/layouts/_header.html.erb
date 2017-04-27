@@ -23,6 +23,9 @@
               <ul>
                 <li><%= link_to t("profile"), current_user %></li>
                 <li><%= link_to t("logout"), logout_path, method: :delete %></li>
+                <% if current_user.admin? %>
+                  <li><%= link_to t("add_product"), new_product_path %></li>
+                <% end %>
               </ul>
             </li>
           <% else %>
