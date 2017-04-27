@@ -1,0 +1,12 @@
+<%= form_for @rating do |f| %>
+  <div class="fa fa-comments" id="commets_size">
+    <%= @product.comments.size - 1 %>
+  </div>
+  <div class="fa fa-star" id="current_rating" >
+    <%= @product.current_score.round(2) %>
+  </div>
+  <input id="stars" value=<%= @rating.score %> type="text" class="rating"
+    data-min=0 data-max=5 data-step=0.5 data-size="xs">
+  <%= f.hidden_field :product_id %>
+  <%= f.hidden_field :id, id: "rating_id" %>
+<% end %>

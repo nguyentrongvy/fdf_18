@@ -5,6 +5,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.string :description
       t.float :price
       t.integer :quantity
+      t.integer :ratinger
       t.float :current_score
       t.references :category, foreign_key: true
 

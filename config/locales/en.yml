@@ -125,6 +125,9 @@ en:
   javascript:
     please_enter: "Please enter first !"
     error_comment: "Error, please try again: \n"
+    error_comment: "\n Error, please try again !"
+    error_rating: "\n Error, please try again !"
+    not_correct_user: "Nor correct user"
   categories:
     new:
       create: "Create new category"

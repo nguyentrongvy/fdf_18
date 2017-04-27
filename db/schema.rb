@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 20170420134836) do
     t.string   "description"
     t.float    "price",         limit: 24
     t.integer  "quantity"
+    t.integer  "ratinger"
     t.float    "current_score", limit: 24
     t.integer  "category_id"
     t.datetime "created_at",               null: false
@@ -71,11 +72,11 @@ ActiveRecord::Schema.define(version: 20170420134836) do
   end
 
   create_table "ratings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.float    "score",      limit: 24
+    t.float    "score",      limit: 24, default: 0.0
     t.integer  "user_id"
     t.integer  "product_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.index ["product_id"], name: "index_ratings_on_product_id", using: :btree
     t.index ["user_id"], name: "index_ratings_on_user_id", using: :btree
   end
