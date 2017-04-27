@@ -33,6 +33,14 @@ en:
       create: "Create new product"
     create:
       product_success: "New product has been created!"
+    edit:
+      edit: "Edit Product"
+    form:
+      create: "Submit"
+    update:
+      success: "Product has been updated!"
+    destroy:
+      success: "Image has been deleted!"
   home_pages:
     about:
       about: "About"
@@ -68,6 +76,11 @@ en:
   log_in: "Please log in first!"
   add_image: "Add Image"
   remove: "Remove"
+  none: "There is no product that matches this id!"
+  modify: " Modify"
+  action: "Action"
+  delete: " Delete"
+  confirm: "Are You Sure?"
   users:
     new:
       create: "Sign Up"

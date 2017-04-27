@@ -1,6 +1,8 @@
 class ProductsController < ApplicationController
   before_action :load_category, :logged_in_user,
-    :verify_admin!, only: [:new, :create]
+    :verify_admin!, except: [:show]
+  before_action :load_product, except: [:new, :create]
+  before_action :load_product_image, only: [:show, :edit]
 
   def index
   end
@@ -8,12 +10,14 @@ class ProductsController < ApplicationController
   def show
     @product = Product.includes(:comments).find_by id: params[:id]
     @comment = @product.comments.new
-    @product_images = @product.product_images
   end
 
   def new
     @product = Product.new
     product_image = @product.product_images.build
+  end
+
+  def edit
   end
 
   def create
@@ -26,6 +30,24 @@ class ProductsController < ApplicationController
     end
   end
 
+  def update
+    if @product.update_attributes product_params
+      flash[:info] = t ".success"
+      redirect_to @product
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if @product.destroy
+      flash[:info] = t ".success"
+    else
+      flash[:danger] = t ".delete_fail"
+    end
+    redirect_to root_url
+  end
+
   private
 
   def product_params
@@ -35,5 +57,17 @@ class ProductsController < ApplicationController
 
   def load_category
     @category = Category.all.map{|category| [category.name, category.id]}
+  end
+
+  def load_product
+    @product = Product.find_by id: params[:id]
+    unless @product
+      flash[:warning] = t "none"
+      redirect_to root_url
+    end
+  end
+
+  def load_product_image
+    @product_images = @product.product_images
   end
 end
