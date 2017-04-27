@@ -8,6 +8,7 @@ end
 gem "rails", "~> 5.0.2"
 gem "mysql2"
 gem "config"
+gem "i18n-js"
 gem "bootstrap-sass", "3.3.6"
 gem "puma", "~> 3.0"
 gem "sass-rails", "~> 5.0"

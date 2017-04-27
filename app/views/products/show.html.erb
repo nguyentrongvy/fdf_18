@@ -1,28 +1,29 @@
 <% provide :title, @product.name %>
 <div class="main">
-  <div class="reservation_top">
+  <div class="reservation_top" id="food_detail">
     <div class="container">
       <div class="row">
-
         <div class="col-md-8">
           <div class="post1">
-
             <h3><a><%= @product.name %></a></h3>
             <div class="post1_header">
               <%= simple_format(h @product.created_at) %>
-              <span><%= t ".posted" %>
+              <div><%= t ".posted" %>
                 <%= time_ago_in_words @product.created_at %>
                 <%= t(".ago") %>,
-              </span>
-              <span class="post1_header_by" title="admin">
+                <div class="post1_header_comments">
+                  <div class="fa fa-comments" id="commets_size">
+                    <%= @product.comments.size - 1 %>
+                  </div>
+                  <div class="fa fa-star"><%= @product.current_score %>
+                  </div>
+                  <div class="stars starrr" data-rating="0"></div>
+                </div>
+              </div>
+              <div class="post1_header_by">
                 <%= t ".by_admin" %>
-              </span>
-              <span class="post1_header_comments" title="comment">
-                <a><%= @product.comments.size %> <%= t(".comments") %></a>
-              </span>
-              <span class="post1_header_comments">
-                <a><%= @product.current_score %> <%= t(".point") %>,</a>
-              </span>
+              </div>
+
             </div>
             <%= link_to image_tag(@product.product_images.first.image,
               width: Settings.image.size.food_detail_width,
@@ -31,14 +32,14 @@
             <p><%= @product.description%></p>
           </div>
 
-          <%= render partial: "add_comment"%>
+          <%= render partial: "comments/add_comment"%>
 
           <div class="container">
             <div class="row">
               <div class="col-md-8">
                 <h2 class="page-header"><%= t(".comment_title") %></h2>
-                  <section class="comment-list">
-                    <%= render partial: "comment", collection: @product.comments %>
+                  <section class="comment-list" id="comment_list">
+                    <%= render partial: "comments/comment", collection: @product.comments %>
                   </section>
               </div>
             </div>

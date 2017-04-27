@@ -14,13 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-//
 //= require wow.min
 //= require carousel
 //= require fwslider
-//= require jquery-ui
 //= require jquery.flexisel
 //= require jquery.openCarousel
 //= require modernizr.custom
 //= require comment
-
+//= require add-new-comment
+//= require i18n
+//= require i18n.js
+//= require i18n/translations
