@@ -29,12 +29,7 @@
                 <%= time_ago_in_words @product.created_at %>
                 <%= t(".ago") %>,
                 <div class="post1_header_comments">
-                  <div class="fa fa-comments" id="commets_size">
-                    <%= @product.comments.size - 1 %>
-                  </div>
-                  <div class="fa fa-star"><%= @product.current_score %>
-                  </div>
-                  <div class="stars starrr" data-rating="0"></div>
+                  <%= render partial: "ratings/form", object: @rating %>
                 </div>
               </div>
               <div class="post1_header_by">

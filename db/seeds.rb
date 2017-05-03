@@ -13,6 +13,7 @@ Category.create! name: "Seafood",
 Product.create! name: "Crab Food",
   description: "This is crab food",
   price: 50000,
+  ratinger: 20,
   quantity: 2,
   current_score: 4,
   category_id: 3
@@ -32,5 +33,9 @@ Comment.create! content: "This is a good food 1",
   product_id: 1
 
 Comment.create! content: "This is a good food 2",
+  user_id: 1,
+  product_id: 1
+
+Rating.create! score: 3.5,
   user_id: 1,
   product_id: 1

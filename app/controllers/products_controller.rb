@@ -10,6 +10,8 @@ class ProductsController < ApplicationController
   def show
     @product = Product.includes(:comments).find_by id: params[:id]
     @comment = @product.comments.new
+    @product_images = @product.product_images
+    @rating = @product.ratings.find_or_initialize_by user_id: session[:user_id]
   end
 
   def new
