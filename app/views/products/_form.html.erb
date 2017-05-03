@@ -17,6 +17,9 @@
         <%= f.label :category, t("category") %>
         <%= f.select :category_id, @category, {}, class: "form-control" %>
       </div>
+      <span class="add-product">
+        <%= link_to t("new_category"), new_category_path %>
+      </span>
 
       <div class="form-group">
         <%= f.label :quantity, t("quantity") %>

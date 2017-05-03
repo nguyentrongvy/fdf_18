@@ -81,6 +81,11 @@ en:
   action: "Action"
   delete: " Delete"
   confirm: "Are You Sure?"
+  available_image: "Available Image (tick box if you want to delete image) :"
+  category_parent: "Category's Parent:"
+  add_category: "Add new category"
+  new_category: "Need more category?"
+  comment: "comments"
   users:
     new:
       create: "Sign Up"
@@ -120,3 +125,12 @@ en:
   javascript:
     please_enter: "Please enter first !"
     error_comment: "Error, please try again: \n"
+  categories:
+    new:
+      create: "Create new category"
+    form:
+      create: "Submit"
+    create:
+      success: "New category has been created!"
+    show:
+      none: "There is no category that matches this id!"

@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   resources :products
   resources :comments
   resources :carts
+  resources :categories
 end
