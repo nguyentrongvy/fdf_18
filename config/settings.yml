@@ -7,3 +7,4 @@ image:
     avatar_width: 80
     avatar_height: 80
     food_size: "750x223"
+    food_edit: "100x100"

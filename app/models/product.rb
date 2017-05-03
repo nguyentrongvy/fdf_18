@@ -7,6 +7,8 @@ class Product < ApplicationRecord
   accepts_nested_attributes_for :product_images, reject_if: lambda {|attr| attr[:image].blank?},
     allow_destroy: true
 
-  validates :description, :quantity, :price, presence: true
+  validates :description, presence: true
+  validates :price, presence: true
+  validates :quantity, presence: true
   validates :name, presence: true, uniqueness: {case_sensitive: false}
 end

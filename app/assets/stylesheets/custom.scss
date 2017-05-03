@@ -176,10 +176,18 @@
   padding-top: 30px;
 }
 
-/*
-show product
-*/
+/* show product */
 
 #food_detail {
   padding-top: 30px;
+}
+
+.action-button {
+  float: right;
+  margin-top: -35px;
+  margin-right: 40px;
+}
+
+.image-delete {
+  float: right;
 }
