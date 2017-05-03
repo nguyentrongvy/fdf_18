@@ -48,6 +48,20 @@
   padding-bottom: 15px;
 }
 
+.checkbox {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
 /* User Profile */
 
 .profile {
@@ -153,6 +167,10 @@
   margin-top: 6px;
 }
 
+#comment-pagination {
+  display: none;
+}
+
 /* carts */
 
 .carts {
@@ -187,7 +205,6 @@
 #food_detail {
   padding-top: 30px;
 }
-
 .action-button {
   float: right;
   margin-top: -35px;

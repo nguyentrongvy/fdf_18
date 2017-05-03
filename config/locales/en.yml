@@ -110,6 +110,7 @@ en:
       login_success: "Welcome back, "
     new:
       login: "Log in"
+      remember_me: "Remember me on this computer"
   shared:
     error_messages:
       errors: "The form contains"

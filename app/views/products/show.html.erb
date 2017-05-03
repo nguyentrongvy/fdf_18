@@ -47,9 +47,11 @@
             <div class="row">
               <div class="col-md-8">
                 <h2 class="page-header"><%= t(".comment_title") %></h2>
+                  <%= will_paginate @comments, id: "comment-pagination" %>
                   <section class="comment-list" id="comment_list">
-                    <%= render partial: "comments/comment", collection: @product.comments %>
+                    <%= render partial: "comments/comment", collection: @comments %>
                   </section>
+                  <%= will_paginate @comments %>
               </div>
             </div>
           </div>
