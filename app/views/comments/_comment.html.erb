@@ -3,7 +3,7 @@
     <article class="row">
       <div class="col-md-2 col-sm-2 hidden-xs">
         <figure class="thumbnail">
-          <%= link_to gravatar_for comment.user %>
+          <%= link_to gravatar_for comment.user, size: Settings.image.size.avatar%>
         </figure>
       </div>
       <div class="col-md-10 col-sm-10">

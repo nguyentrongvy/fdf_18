@@ -2,13 +2,14 @@ company:
   email: "infor@framgia.com"
 image:
   size:
-    category_width: 340
-    category_height: 224
-    avatar_width: 80
-    avatar_height: 80
+    logo: "33x21"
+    avatar: "80x80"
+    category: "340x224"
+    food_show: "300x200"
     food_size: "750x223"
     food_edit: "100x100"
     food_index: "200x100"
-    food_show: "300x200"
+    header_search: "25x22"
+    header_avatar: "25x22"
 paginate:
   per_page: 3

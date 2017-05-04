@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   resources :ratings
   resources :products
   resources :comments
-  resources :carts
+  resources :orders
   resources :categories
 end
