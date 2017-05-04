@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  attr_accessor :remember_token
   before_save :email_downcase
   enum role: [:admin, :user, :guest]
 
@@ -25,9 +26,27 @@ class User < ApplicationRecord
     self == user
   end
 
+  def remember
+    self.remember_token = new_token
+    update_attribute :remember_digest, User.digest(remember_token)
+  end
+
+  def authenticated? remember_token
+    return false if remember_digest.nil?
+    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  end
+
+  def forget
+    update_attribute :remember_digest, nil
+  end
+
   private
 
   def email_downcase
     email.downcase!
+  end
+
+  def new_token
+    SecureRandom.urlsafe_base64
   end
 end

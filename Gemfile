@@ -19,6 +19,8 @@ gem "jbuilder", "~> 2.5"
 gem "turbolinks"
 gem "bcrypt"
 gem "carrierwave", "0.11.2"
+gem "will_paginate", "3.1.0"
+gem "bootstrap-will_paginate", "0.0.10"
 
 group :development, :test do
   gem "letter_opener"

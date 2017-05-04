@@ -9,3 +9,5 @@ image:
     food_size: "750x223"
     food_edit: "100x100"
     food_show: "300x100"
+paginate:
+  per_page: 3

@@ -10,7 +10,7 @@ $(document).ready(function(){
         dateType: 'json',
         data: $(this).serialize(),
         success: function(result){
-          $('#comment_list').append(result.html_comment);
+          $(result.html_comment).insertBefore('#comment_list');
           $('#commets_size').text(parseInt($("#commets_size").text()) + 1);
           clear();
         },
