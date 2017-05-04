@@ -14,7 +14,7 @@
         <p class="pull-right">
           <%= product.comments.size%> <%= t "comment" %>
         </p>
-        <p class="fa fa-star"><%= product.current_score %></p>
+        <p class="fa fa-star"><%= product.current_score.round(2) %></p>
       </div>
     </div>
   </div>
