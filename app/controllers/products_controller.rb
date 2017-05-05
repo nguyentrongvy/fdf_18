@@ -1,10 +1,13 @@
 class ProductsController < ApplicationController
   before_action :load_category, :logged_in_user,
     :verify_admin!, except: [:show]
-  before_action :load_product, except: [:new, :create]
+  before_action :load_product, except: [:new, :create, :index]
   before_action :load_product_image, only: [:show, :edit]
+  before_action :load_page, only: [:index]
 
   def index
+    @products = Product.includes(:category).select(:id, :name, :quantity, :category_id)
+      .order(name: :asc).paginate page: params[:page]
   end
 
   def show

@@ -14,6 +14,8 @@ class User < ApplicationRecord
   validates :address, :phone, presence: true
   has_secure_password
 
+  self.per_page = 10
+
   class << self
     def digest string
       cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
