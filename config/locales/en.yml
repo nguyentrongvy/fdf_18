@@ -29,6 +29,8 @@ en:
       point: "point"
       comment_title: "Comments"
       ago: "ago"
+      category: "Category"
+      tags: "Tags"
     new:
       create: "Create new product"
     create:
@@ -87,6 +89,7 @@ en:
   new_category: "Need more category?"
   comment: "comments"
   rating_now: "Rating now?"
+  add_cart: "Add to your cart"
   users:
     new:
       create: "Sign Up"

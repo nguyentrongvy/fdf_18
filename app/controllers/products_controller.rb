@@ -8,11 +8,13 @@ class ProductsController < ApplicationController
   end
 
   def show
+    store_location
     @product = Product.includes(:comments).find_by id: params[:id]
     @comment = @product.comments.new
     @product_images = @product.product_images
     @comments = @product.comments.paginate(page: params[:page], per_page:
       Settings.paginate.per_page).order created_at: :desc
+    @category = @product.category
     if current_user
       @rating = @product.ratings.find_or_initialize_by user_id: current_user.id
     end

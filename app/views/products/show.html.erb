@@ -38,9 +38,9 @@
             </div>
             <% @product_images.each do |product_images| %>
               <%= image_tag(product_images.image,
-                size: Settings.image.size.food_edit) %>
+                size: Settings.image.size.food_show) %>
             <% end %>
-            <p><%= @product.description%></p>
+            <p><%= @product.description %></p>
           </div>
           <%= render partial: "comments/add_comment"%>
           <div class="container">
@@ -58,17 +58,28 @@
         </div>
         <div class="col-md-4">
           <div class="category_widget">
-            <h3>Category</h3>
+            <h3><%= t ".category" %></h3>
             <ul class="list-unstyled arrow">
-              <li><a href="#">SeaFood<span class="badge pull-right">21</span></a></li>
-              <li><a href="#">Party<span class="badge pull-right">11</span></a></li>
-              <li><a href="#">Chicken<span class="badge pull-right">31</span></a></li>
+              <li>
+                <%= link_to @category.name, category_path(@category) %>
+                <span class="badge pull-right badge-size">
+                  <%= @category.products.size %>
+                </span>
+              </li>
             </ul>
           </div>
           <ul class="blog-list1">
-            <h3>Tags</h3>
-            <li><a href=""><%= @product.name %></a></li>
+            <h3><%= t ".tags" %></h3>
+            <% @category.products.each do |product| %>
+              <li><%= link_to product.name, product_path(product) %></li>
+            <% end %>
           </ul>
+          <div class="shopping-button">
+            <a href="#" class="btn btn-default custom-btn">
+              <span class="glyphicon glyphicon-shopping-cart"></span>
+              <%= t "add_cart" %>
+            </a>
+          </div>
           <ul class="recent-list">
             <h3><%= t(".suggest") %></h3>
             <div class="course_demo">
