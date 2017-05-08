@@ -13,4 +13,5 @@ class Product < ApplicationRecord
   validates :name, presence: true, uniqueness: {case_sensitive: false}
 
   self.per_page = 5
+  scope :search, ->search{where "name LIKE ? OR description LIKE ?", "%#{search}%", "%#{search}%"}
 end
