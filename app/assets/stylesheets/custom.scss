@@ -87,6 +87,13 @@ body {
   background-color: hotpink;
 }
 
+.plus-edit {
+  color: LimeGreen;
+  a {
+    color: black;
+  }
+}
+
 /* User Profile */
 
 .profile {
@@ -96,6 +103,16 @@ body {
 
 .avatar {
   margin-top: 20px;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    border-bottom: 1px solid $gray-lighter;
+    overflow: auto;
+    padding: 10px 0;
+  }
 }
 
 /*comment*/
@@ -583,7 +600,7 @@ ul.dropdown-menu {
   z-index: 1;
   width: 100%;
   position: fixed;
-  background-color: white;
+  background-color: White;
   border: 1px solid #e0e0e0;
 }
 

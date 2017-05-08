@@ -40,6 +40,8 @@ en:
   products:
     index:
       suggest: "Suggest"
+      product_list: "Product List"
+      add_products: "add more product"
     show:
       by_admin: "by Admin"
       comments: "comments"
@@ -97,7 +99,7 @@ en:
   remove: "Remove"
   none: "There is no product that matches this id!"
   modify: " Modify"
-  action: "Action"
+  action: "Action:"
   delete: " Delete"
   confirm: "Are You Sure?"
   available_image: "Available Image (tick box if you want to delete image) :"
@@ -107,6 +109,7 @@ en:
   comment: "comments"
   rating_now: "Rating now?"
   add_cart: "Add to your cart"
+  product_quantity: "Product Quantity:"
   users:
     new:
       create: "Sign Up"
@@ -125,6 +128,8 @@ en:
       can_not: "You don't have permission to access this page!"
     update:
       success: "Your profile has been updated!"
+    index:
+      all_users: "All Users"
   sessions:
     create:
       invalid: "Wrong email or password. Please try again!"
@@ -173,3 +178,6 @@ en:
     destroy:
       can_not_delete: "There are some products in this category, permission is denied!"
       success: "Category has been deleted!"
+    index:
+      category_list: "Categories list"
+      add_categories: "add more category"

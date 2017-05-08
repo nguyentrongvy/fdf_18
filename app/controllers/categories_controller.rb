@@ -1,8 +1,14 @@
 class CategoriesController < ApplicationController
   before_action :logged_in_user, :verify_admin!, except: [:show]
   before_action :load_parent, only: [:new, :edit]
-  before_action :load_category, except: [:new, :create]
+  before_action :load_category, except: [:new, :create, :index]
   before_action :verify_category, only: [:destroy]
+  before_action :load_page, only: [:index]
+
+  def index
+    @categories = Category.includes(:products).select(:id, :name).order(name: :asc)
+      .paginate page: params[:page]
+  end
 
   def show
   end

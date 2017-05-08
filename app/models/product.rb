@@ -11,4 +11,6 @@ class Product < ApplicationRecord
   validates :price, presence: true
   validates :quantity, presence: true
   validates :name, presence: true, uniqueness: {case_sensitive: false}
+
+  self.per_page = 5
 end

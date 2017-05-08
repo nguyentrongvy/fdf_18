@@ -6,4 +6,5 @@ class Category < ApplicationRecord
   validates :description, presence: true
   validates :name, presence: true, uniqueness: {case_sensitive: false}
 
+  self.per_page = 5
 end
