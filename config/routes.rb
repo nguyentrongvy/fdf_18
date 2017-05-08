@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   resources :comments
   resources :orders
   resources :categories
+  resources :searches
 end

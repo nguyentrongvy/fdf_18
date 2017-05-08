@@ -19,6 +19,22 @@ body {
   margin-top: 15px;
 }
 
+.search-index {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  li {
+    color: red;
+    span {
+      color: black;
+      font-style: italic;
+    }
+  }
+}
+
+.red-mark {
+  color: red;
+}
+
 #error_explanation {
   color: red;
   ul {
