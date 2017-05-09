@@ -14,4 +14,8 @@ class Product < ApplicationRecord
 
   self.per_page = 5
   scope :search, ->search{where "name LIKE ? OR description LIKE ?", "%#{search}%", "%#{search}%"}
+  scope :min_price, ->min_price{where "price >= ?", min_price if min_price.present?}
+  scope :max_price, ->max_price{where "price <= ?", max_price if max_price.present?}
+  scope :rating, ->rating{where "current_score >= ?", rating if rating.present?}
+  scope :by_category, ->category_id{where category_id: category_id if category_id.present?}
 end
