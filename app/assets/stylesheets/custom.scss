@@ -110,6 +110,10 @@ body {
   }
 }
 
+.search-button {
+  margin-left: 195px;
+}
+
 /* User Profile */
 
 .profile {
@@ -729,4 +733,11 @@ ul.dropdown-menu {
 
 #cart {
   text-decoration: none;
+}
+
+#advance-search {
+  margin-top: 16px;
+  a {
+    color: #777;
+  }
 }

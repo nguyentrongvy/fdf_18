@@ -64,10 +64,10 @@ ActiveRecord::Schema.define(version: 20170503014627) do
     t.float    "price",         limit: 24
     t.integer  "quantity"
     t.integer  "ratinger"
-    t.float    "current_score", limit: 24
+    t.float    "current_score", limit: 24, default: 0.0
     t.integer  "category_id"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.index ["category_id"], name: "index_products_on_category_id", using: :btree
   end
 
